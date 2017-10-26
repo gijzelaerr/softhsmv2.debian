@@ -1,0 +1,8 @@
+config.log
+src/lib/crypto/test/test-results.xml
+src/lib/data_mgr/test/test-results.xml
+src/lib/handle_mgr/test/test-results.xml
+src/lib/object_store/test/test-results.xml
+src/lib/session_mgr/test/test-results.xml
+src/lib/slot_mgr/test/test-results.xml
+src/lib/test/tokens/*/

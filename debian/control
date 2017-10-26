@@ -1,0 +1,35 @@
+Source: softhsmv2
+Priority: optional
+Maintainer: KERN packaging <packaging@kernsuite.info>
+Build-Depends:
+ debhelper (>=9),
+ automake,
+ libssl-dev,
+ libsqlite3-dev,
+ libcppunit-dev,
+ libtool-bin
+Standards-Version: 3.9.7
+Section: libs
+Homepage: https://github.com/opendnssec/SoftHSMv2
+Vcs-Git: https://github.com/gijzelaerr/softhsmv2.debian
+Vcs-Browser: https://github.com/gijzelaerr/softhsmv2.debian
+
+Package:softhsmv2
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Software implementation for Hardware Security Modules
+ OpenDNSSEC handles and stores its cryptographic keys via the PKCS#11 interface.
+ This interface specifies how to communicate with cryptographic devices such as
+ HSM:s (Hardware Security Modules) and smart cards. The purpose of these devices
+ is, among others, to generate cryptographic keys and sign information without
+ revealing private-key material to the outside world. They are often designed to
+ perform well on these specific tasks compared to ordinary processes in a normal
+ computer.
+ .
+ A potential problem with the use of the PKCS#11 interface is that it might
+ limit the wide spread use of OpenDNSSEC, since a potential user might not be
+ willing to invest in a new hardware device. To counter this effect, OpenDNSSEC
+ is providing a software implementation of a generic cryptographic device with a
+ PKCS#11 interface, the SoftHSM. SoftHSM is designed to meet the requirements of
+ OpenDNSSEC, but can also work together with other cryptographic products
+ because of the PKCS#11 interface.
