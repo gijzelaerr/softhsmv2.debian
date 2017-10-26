@@ -3,6 +3,7 @@ Priority: optional
 Maintainer: KERN packaging <packaging@kernsuite.info>
 Build-Depends:
  debhelper (>=9),
+ dh-autoreconf,
  automake,
  libssl-dev,
  libsqlite3-dev,
